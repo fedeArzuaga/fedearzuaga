@@ -13,7 +13,7 @@
 
 /* Variables in the website */
 :root{
-	--font-size-title: 32px;
+	--font-size-title: 64px;
 	--blue: #1EA4D9;
 	--fuccia: #F22E62;
 	--font-title: Comfortaa;
@@ -39,7 +39,7 @@ body{
 
 h1{
 	font-size: var(--font-size-title);
-	line-height: 48px;
+	line-height: 96px;
 	font-family: var(--font-title);
 	margin: 0 0 96px 0;
 }
@@ -47,11 +47,11 @@ h1{
 /* Loader Styles */
 
 .circle{
-	width: 100px;
-	height: 100px;
+	width: 200px;
+	height: 200px;
 	background: transparent;
 	position: relative;
-	font-size: 64px;
+	font-size: 96px;
 	border-radius: 50%;
 	border-top: 10px solid var(--blue);
 	border-left: 10px solid transparent;
@@ -64,8 +64,8 @@ h1{
 
 #count{
 	position: relative;
-	top: -75px;
-	font-size: 48px;
+	top: -150px;
+	font-size: 96px;
 	margin: 0;
 	font-family: Comfortaa;
 }
@@ -74,25 +74,51 @@ h1{
 	content: "";
 	position: absolute;
 	margin: 0;
-	left: -35px;
-	top: -35px;
-	width: 130px;
-	height: 130px;
+	left: -45px;
+	top: -45px;
+	width: 250px;
+	height: 250px;
 	background: transparent;
 	border-radius: 50%;
 	border-top: 10px solid transparent;
 	border-left: 10px solid var(--fuccia);
 	border-right: 10px solid var(--fuccia);
 	border-bottom: 10px solid transparent;
-	-webkit-animation: load-inverse 2.5s infinite linear;
-	-o-animation: load-inverse 2.5s infinite linear;
+	-webkit-animation: load-inverse 2.5s infinite linear; 
+	-o-animation: load-inverse 2.5s infinite linear; 
 	animation: load-inverse 2.5s infinite linear;
 }
 
 @media screen and (min-width: 768px){
-	.container{
-		width: 40%;
+	:root{
+		--font-size-title: 32px;
 	}
+
+	.container{
+		width: 45%;
+	}
+
+	h1{
+		line-height: 48px;
+	}
+	
+	.circle{
+		width: 100px;
+		height: 100px;
+	}
+
+	.circle::before{
+		width: 130px;
+		height: 130px;
+		left: -35px;
+		top: -35px;
+	}
+
+	#count{
+		font-size: 48px;
+		top: -75px;
+	}
+
 }
 
 @keyframes load-inverse{

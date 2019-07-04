@@ -5,7 +5,7 @@ let count = setInterval( () => {
 	
 	if( number == 0 ){
 		clearInterval(count);
-		window.location.replace("https://fedearzuaga.com");
+		// window.location.replace("https://fedearzuaga.com");
 		}
 
 	span.textContent = number;
